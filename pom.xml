@@ -14,7 +14,7 @@
     <artifactId>api-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>api-gateway</name>
-    <description>Spring Cloud API Gateway with Eureka, Security, and WebFlux</description>
+    <description>Spring Cloud API Gateway with Eureka, Security, WebFlux, and CORS</description>
 
     <properties>
         <java.version>17</java.version>
@@ -40,10 +40,10 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
-        <!-- JWT / OAuth2 (if needed) -->
+        <!-- Reactive Web (required for Spring Cloud Gateway) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
 
         <!-- Actuator for monitoring -->
