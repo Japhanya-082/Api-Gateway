@@ -39,7 +39,7 @@ public class SecurityConfig {
            .cors(cors -> {})  // just enable, do not configure here
            .authorizeExchange(exchanges -> exchanges
            .pathMatchers(HttpMethod.OPTIONS).permitAll()
-           .pathMatchers("/auth/**", "/customer/**","/vendor/**", "/invoice/**", "/manual-invoice/**").permitAll()
+           .pathMatchers("/auth/**", "/customer/**","/vendor/**", "/invoice/**", "/manual-invoice/**" , "/bills/**").permitAll()
            .anyExchange().authenticated());
  return http.build();
 }
